@@ -23,7 +23,7 @@ class Kmeans:
         # clusters contains the kmeans (keys) and the featureset
         # which are the values; cluster changes everytime kmean value
         # chenges.
-        for i in range(self.max_iter):
+        for i in range(3):
             self.clusters = {}
 
             for i in range(self.k):
@@ -48,10 +48,8 @@ class Kmeans:
             # to see it in action alternate the commenting and look at the
             # resulting graph.
             for cluster in self.clusters:
-                pass
-                # self.kmeans[cluster] = \
-                # np.average(self.clusters[cluster],
-                #                                            axis=0)
+                self.kmeans[cluster] = \
+                    np.average(self.clusters[cluster], axis=0)
             # innocent until proven guilty
             optimized = True
 
